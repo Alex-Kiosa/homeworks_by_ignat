@@ -1,9 +1,8 @@
-html{
+html {
     background: #A8ECC5 url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612706197_14-p-zelenii-fon-odnotonnii-gradient-15.jpg);
     height: 100%;
     line-height: 1.5;
     font-size: 17px;
-    text-align: center;
 }
 
 body {
@@ -13,6 +12,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0 5%;
 }
 
 code {
@@ -20,23 +20,36 @@ code {
     monospace;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     margin-bottom: 20px;
 }
 
-h2{
-    margin-top: 0;
+h2 {
+    margin: 0 0 15px;
 }
 
-.App {
+.app {
+    overflow: hidden;
+}
+
+.app-nodes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 40px 40px 10px 40px;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.app-node {
+    width: 48.5%;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #E6F9EE;
+    border-radius: 5px;
 }
 
 input {
@@ -56,40 +69,55 @@ button,
 }
 
 button:not(button:disabled),
-.button{
+.button {
     background-color: #48e88c;
     color: #212121;
 }
 
 button:hover:not(button:disabled),
-.button:hover{
+.button:hover {
     background-color: #8dfdba;
     cursor: pointer;
-}
-
-.task{
-    width: 46%;
-    padding: 30px;
-    border: 1px solid #38D37A;
-    border-radius: 10px;
-    background: #fff;
-    margin-bottom: 30px;
 }
 
 /*Navbar*/
 
 .nav {
     position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    transition: all 1s;
+    transform: translateX(-280px);
+    margin-bottom: 20px;
+}
+
+.nav:hover {
+    transform: translateX(0);
+    transition: all 1s;
 }
 
 .nav-menu {
-    position: absolute;
-    z-index: 100;
-    right: -100px;
-    top: 0;
-    display: none;
+    display: inline-flex;
 }
 
-.nav:hover .nav-menu{
-    display: block;
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 0 10px;
+    text-transform: capitalize;
+    color: #002200;
+    text-decoration: none;
+    border: solid 1px #002200;
+    border-radius: 5px;
 }
+
+.nav-item:hover {
+    background-color: #8dfdba;
+}
+
+.nav-item-active {
+    background-color: #E6F9EE;
+}
+
