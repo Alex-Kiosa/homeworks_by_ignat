@@ -1,5 +1,5 @@
 html {
-    background: #A8ECC5 url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612706197_14-p-zelenii-fon-odnotonnii-gradient-15.jpg);
+    background: #A8ECC5 url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612706197_14-p-zelenii-fon-odnotonnii-gradient-15.jpg');
     height: 100%;
     line-height: 1.5;
     font-size: 17px;
@@ -64,18 +64,25 @@ button,
     padding: 10px 15px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #199d54;
+    border: 1px solid transparent;
     font-weight: 600;
 }
 
 button:not(button:disabled),
-.button {
+.button:not(button:disabled){
     background-color: #48e88c;
+    border-color: #199d54;
     color: #212121;
 }
 
+button:disabled,
+.button:disabled {
+    border-color: #949494;
+    background-color: #c0c0c0;
+}
+
 button:hover:not(button:disabled),
-.button:hover {
+.button:hover:not(button:disabled) {
     background-color: #8dfdba;
     cursor: pointer;
 }
@@ -119,5 +126,20 @@ button:hover:not(button:disabled),
 
 .nav-item-active {
     background-color: #E6F9EE;
+}
+
+.editable-span {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.editable-span:before {
+    content: "";
+    display: block;
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+    background: url("assets/edit-svgrepo-com.svg") center no-repeat;
 }
 
