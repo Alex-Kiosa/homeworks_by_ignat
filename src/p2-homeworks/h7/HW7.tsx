@@ -8,11 +8,9 @@ function HW7() {
     const [value, onChangeOption] = useState(arr[1])
 
     return (
-        <div>
-            <hr/>
-            homeworks 7
+        <div className={"app-node"}>
+            <h2>Homeworks 7</h2>
 
-            {/*should work (должно работать)*/}
             <div>
                 <SuperSelect
                     options={arr}
@@ -29,11 +27,9 @@ function HW7() {
                 />
             </div>
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperSelect/>*/}
             {/*<AlternativeSuperRadio/>*/}
-            <hr/>
         </div>
     )
 }
